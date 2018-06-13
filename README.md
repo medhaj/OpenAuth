@@ -5,7 +5,7 @@
 
 # OAuth2 for iOS
 
-[![CocoaPods Compatible](https://cocoapod-badges.herokuapp.com/v/OpenAuth/1.0.0/badge.png)](https://cocoadocs.org/docsets/OpenAuth)
+[![CocoaPods Compatible](https://cocoapod-badges.herokuapp.com/v/OpenAuth/1.0.1/badge.png)](https://cocoadocs.org/docsets/OpenAuth)
 [![Platform](https://cocoapod-badges.herokuapp.com/p/OpenAuth/badge.png)](https://cocoadocs.org/docsets/OpenAuth)
 [![Twitter](https://img.shields.io/badge/twitter-@MedHajlaoui-blue.svg?style=flat)](https://twitter.com/MedHajlaoui)
 
@@ -69,10 +69,10 @@ You can choose one of the following logging levels:
 
 ## Add your OAuth2 configuration
 
-### OpenAuth.plist file
+### Info.plist file
 
-OpenAuth loads automatically your OAuth2 configuration from `OpenAuth.plist` plist file.
-The following is a description of all configurations you can put in the file
+OpenAuth loads automatically your OAuth2 configuration from your app `Info.plist` file. Add a new row in Info.plist. Name it `OpenAuthConfiguration` and set its type to `Dictionary`.
+The following is a description of all configurations you can put in the created dictionary
 
 | Key        			| Type          | Required   |Description  |
 |:-----------------:|:-------------:|:----------:|:------------|
@@ -110,76 +110,83 @@ For `KEYCHAIN_ACCESS_MODE`, possible values are:
 
  
 ### Minimal Viable Configuration
-You can download [here](assets/plists/min/OpenAuth.plist) a plist file with the minimum required configuration or copy the XML in your Project OpenAuth.plist resource
+You can download [here](assets/plists/min/Info.plist) a plist file with the minimum required configuration or copy the XML in your Project Info.plist resource
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>CLIENT_ID</key>
-	<string></string>
-	<key>AUTHORIZE_URI</key>
-	<string></string>
-	<key>TOKEN_URI</key>
-	<string></string>
-	<key>REDIRECT_URIS</key>
-	<array>
-		<string></string>
-	</array>
-</dict>
+	<dict>
+		<key>OpenAuthConfiguration</key>
+        <dict>
+        	<key>CLIENT_ID</key>
+			<string></string>
+			<key>AUTHORIZE_URI</key>
+			<string></string>
+			<key>TOKEN_URI</key>
+			<string></string>
+			<key>REDIRECT_URIS</key>
+			<array>
+				<string></string>
+			</array>
+        </dict>
+	</dict>
 </plist>
 
 ```
 
 ### Full Configuration
-You can download [here](assets/plists/full/OpenAuth.plist) a plist file with all available keys for an advanced configuration or copy the XML in your Project OpenAuth.plist resource
+You can download [here](assets/plists/full/Info.plist) a plist file with all available keys for an advanced configuration or copy the XML in your Project Info.plist resource
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>CLIENT_ID</key>
-	<string></string>
-	<key>AUTHORIZE_URI</key>
-	<string></string>
-	<key>TOKEN_URI</key>
-	<string></string>
-	<key>REDIRECT_URIS</key>
-	<array>
-		<string></string>
-	</array>
-	<key>CLIENT_SECRET</key>
-	<string></string>
-	<key>CLIENT_NAME</key>
-	<string></string>
-	<key>LOGO_URI</key>
-	<string></string>
-	<key>REGISTRATION_URI</key>
-	<string></string>
-	<key>SCOPE</key>
-	<string></string>
-	<key>SECRET_IN_BODY</key>
-	<false/>
-	<key>HEADERS</key>
-	<dict/>
-	<key>PARAMETERS</key>
-	<dict/>
-	<key>TOKEN_ASSUME_UNEXPIRED</key>
-	<true/>
-	<key>ENABLE_KEYCHAIN</key>
-	<false/>
-	<key>TOKENS_KEYCHAIN_ACCOUNT</key>
-	<string></string>
-	<key>CLIENT_KEYCHAIN_ACCOUNT</key>
-	<string></string>
-	<key>KEYCHAIN_ACCESS_MODE</key>
-	<string>kSecAttrAccessibleWhenUnlocked</string>
-	<key>KEYCHAIN_ACCESS_GROUP</key>
-	<string></string>
-</dict>
+	<dict>
+		<key>OpenAuthConfiguration</key>
+        <dict>
+        	<key>CLIENT_ID</key>
+				<string></string>
+				<key>AUTHORIZE_URI</key>
+				<string></string>
+				<key>TOKEN_URI</key>
+				<string></string>
+				<key>REDIRECT_URIS</key>
+				<array>
+					<string></string>
+				</array>
+				<key>CLIENT_SECRET</key>
+				<string></string>
+				<key>CLIENT_NAME</key>
+				<string></string>
+				<key>LOGO_URI</key>
+				<string></string>
+				<key>REGISTRATION_URI</key>
+				<string></string>
+				<key>SCOPE</key>
+				<string></string>
+				<key>SECRET_IN_BODY</key>
+				<false/>
+				<key>HEADERS</key>
+				<dict/>
+				<key>PARAMETERS</key>
+				<dict/>
+				<key>TOKEN_ASSUME_UNEXPIRED</key>
+				<true/>
+				<key>ENABLE_KEYCHAIN</key>
+				<false/>
+				<key>TOKENS_KEYCHAIN_ACCOUNT</key>
+				<string></string>
+				<key>CLIENT_KEYCHAIN_ACCOUNT</key>
+				<string></string>
+				<key>KEYCHAIN_ACCESS_MODE</key>
+				<string>kSecAttrAccessibleWhenUnlocked</string>
+				<key>KEYCHAIN_ACCESS_GROUP</key>
+				<string></string>
+        </dict>
+	</dict>
 </plist>
+
 ```
 
 ## Handle Redirect URL

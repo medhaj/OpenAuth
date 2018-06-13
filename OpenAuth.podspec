@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = "OpenAuth"
-    s.version          = "1.0.0"
+    s.version          = "1.0.1"
     s.summary          = "OAuth2.0 made easy for iOS"
 
 # This description is used to generate tags and improve search results.
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
     s.description      = <<-DESC
 OpenAuth is a light framework for iOS written in swift 4. It provides an easy way to integrate OAuth2.0 in your iOS apps.
 - Easily integrate OAuth2 in your iOS app.
-- Easy configuration using a plist file (no code needed to provide the OAuth2 configuration)
+- Easy configuration using your app Info.plist file (no code needed to provide the OAuth2 configuration)
 - Kaychain support
 DESC
 
@@ -33,7 +33,7 @@ DESC
     s.ios.deployment_target = '9.0'
 
 
-    s.source              = { :git => "https://github.com/medhaj/OpenAuth.git", :tag => "1.0.0" }
+    s.source              = { :git => "https://github.com/medhaj/OpenAuth.git", :tag => "1.0.1" }
     s.vendored_frameworks = 'OpenAuth/OpenAuth.framework'
 
 end
