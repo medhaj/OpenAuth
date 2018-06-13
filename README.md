@@ -145,44 +145,44 @@ You can download [here](assets/plists/full/Info.plist) a plist file with all ava
 	<dict>
 	<key>OpenAuthConfiguration</key>
 	<dict>
-    	<key>CLIENT_ID</key>
+		<key>CLIENT_ID</key>
+		<string></string>
+		<key>AUTHORIZE_URI</key>
+		<string></string>
+		<key>TOKEN_URI</key>
+		<string></string>
+		<key>REDIRECT_URIS</key>
+		<array>
 			<string></string>
-			<key>AUTHORIZE_URI</key>
-			<string></string>
-			<key>TOKEN_URI</key>
-			<string></string>
-			<key>REDIRECT_URIS</key>
-			<array>
-				<string></string>
-			</array>
-			<key>CLIENT_SECRET</key>
-			<string></string>
-			<key>CLIENT_NAME</key>
-			<string></string>
-			<key>LOGO_URI</key>
-			<string></string>
-			<key>REGISTRATION_URI</key>
-			<string></string>
-			<key>SCOPE</key>
-			<string></string>
-			<key>SECRET_IN_BODY</key>
-			<false/>
-			<key>HEADERS</key>
-			<dict/>
-			<key>PARAMETERS</key>
-			<dict/>
-			<key>TOKEN_ASSUME_UNEXPIRED</key>
-			<true/>
-			<key>ENABLE_KEYCHAIN</key>
-			<false/>
-			<key>TOKENS_KEYCHAIN_ACCOUNT</key>
-			<string></string>
-			<key>CLIENT_KEYCHAIN_ACCOUNT</key>
-			<string></string>
-			<key>KEYCHAIN_ACCESS_MODE</key>
-			<string>kSecAttrAccessibleWhenUnlocked</string>
-			<key>KEYCHAIN_ACCESS_GROUP</key>
-			<string></string>
+		</array>
+		<key>CLIENT_SECRET</key>
+		<string></string>
+		<key>CLIENT_NAME</key>
+		<string></string>
+		<key>LOGO_URI</key>
+		<string></string>
+		<key>REGISTRATION_URI</key>
+		<string></string>
+		<key>SCOPE</key>
+		<string></string>
+		<key>SECRET_IN_BODY</key>
+		<false/>
+		<key>HEADERS</key>
+		<dict/>
+		<key>PARAMETERS</key>
+		<dict/>
+		<key>TOKEN_ASSUME_UNEXPIRED</key>
+		<true/>
+		<key>ENABLE_KEYCHAIN</key>
+		<false/>
+		<key>TOKENS_KEYCHAIN_ACCOUNT</key>
+		<string></string>
+		<key>CLIENT_KEYCHAIN_ACCOUNT</key>
+		<string></string>
+		<key>KEYCHAIN_ACCESS_MODE</key>
+		<string>kSecAttrAccessibleWhenUnlocked</string>
+		<key>KEYCHAIN_ACCESS_GROUP</key>
+		<string></string>
 	</dict>
 	</dict>
 </plist>
