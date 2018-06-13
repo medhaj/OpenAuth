@@ -117,19 +117,19 @@ You can download [here](assets/plists/min/Info.plist) a plist file with the mini
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 	<dict>
-		<key>OpenAuthConfiguration</key>
-        <dict>
-        	<key>CLIENT_ID</key>
+	<key>OpenAuthConfiguration</key>
+	<dict>
+    	<key>CLIENT_ID</key>
+		<string></string>
+		<key>AUTHORIZE_URI</key>
+		<string></string>
+		<key>TOKEN_URI</key>
+		<string></string>
+		<key>REDIRECT_URIS</key>
+		<array>
 			<string></string>
-			<key>AUTHORIZE_URI</key>
-			<string></string>
-			<key>TOKEN_URI</key>
-			<string></string>
-			<key>REDIRECT_URIS</key>
-			<array>
-				<string></string>
-			</array>
-        </dict>
+		</array>
+    </dict>
 	</dict>
 </plist>
 
@@ -143,47 +143,47 @@ You can download [here](assets/plists/full/Info.plist) a plist file with all ava
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 	<dict>
-		<key>OpenAuthConfiguration</key>
-        <dict>
-        	<key>CLIENT_ID</key>
+	<key>OpenAuthConfiguration</key>
+	<dict>
+    	<key>CLIENT_ID</key>
+			<string></string>
+			<key>AUTHORIZE_URI</key>
+			<string></string>
+			<key>TOKEN_URI</key>
+			<string></string>
+			<key>REDIRECT_URIS</key>
+			<array>
 				<string></string>
-				<key>AUTHORIZE_URI</key>
-				<string></string>
-				<key>TOKEN_URI</key>
-				<string></string>
-				<key>REDIRECT_URIS</key>
-				<array>
-					<string></string>
-				</array>
-				<key>CLIENT_SECRET</key>
-				<string></string>
-				<key>CLIENT_NAME</key>
-				<string></string>
-				<key>LOGO_URI</key>
-				<string></string>
-				<key>REGISTRATION_URI</key>
-				<string></string>
-				<key>SCOPE</key>
-				<string></string>
-				<key>SECRET_IN_BODY</key>
-				<false/>
-				<key>HEADERS</key>
-				<dict/>
-				<key>PARAMETERS</key>
-				<dict/>
-				<key>TOKEN_ASSUME_UNEXPIRED</key>
-				<true/>
-				<key>ENABLE_KEYCHAIN</key>
-				<false/>
-				<key>TOKENS_KEYCHAIN_ACCOUNT</key>
-				<string></string>
-				<key>CLIENT_KEYCHAIN_ACCOUNT</key>
-				<string></string>
-				<key>KEYCHAIN_ACCESS_MODE</key>
-				<string>kSecAttrAccessibleWhenUnlocked</string>
-				<key>KEYCHAIN_ACCESS_GROUP</key>
-				<string></string>
-        </dict>
+			</array>
+			<key>CLIENT_SECRET</key>
+			<string></string>
+			<key>CLIENT_NAME</key>
+			<string></string>
+			<key>LOGO_URI</key>
+			<string></string>
+			<key>REGISTRATION_URI</key>
+			<string></string>
+			<key>SCOPE</key>
+			<string></string>
+			<key>SECRET_IN_BODY</key>
+			<false/>
+			<key>HEADERS</key>
+			<dict/>
+			<key>PARAMETERS</key>
+			<dict/>
+			<key>TOKEN_ASSUME_UNEXPIRED</key>
+			<true/>
+			<key>ENABLE_KEYCHAIN</key>
+			<false/>
+			<key>TOKENS_KEYCHAIN_ACCOUNT</key>
+			<string></string>
+			<key>CLIENT_KEYCHAIN_ACCOUNT</key>
+			<string></string>
+			<key>KEYCHAIN_ACCESS_MODE</key>
+			<string>kSecAttrAccessibleWhenUnlocked</string>
+			<key>KEYCHAIN_ACCESS_GROUP</key>
+			<string></string>
+    </dict>
 	</dict>
 </plist>
 
@@ -195,8 +195,8 @@ On your AppDelegate.swift file, import OpenAuth and implement the following meth
 
 ```swift
 	func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        OpenAuth.shared.handleRedirect(url: url)
-        return true
+		OpenAuth.shared.handleRedirect(url: url)
+		return true
     }
 ```
 
