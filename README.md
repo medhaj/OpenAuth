@@ -55,7 +55,7 @@ Optionally, you can enable to the logger. Use the following code to set a loggin
 
 
 ```swift
-OpenAuth.logger.level = .verbose
+	OpenAuth.logger.level = .verbose
 ```
 
                   
