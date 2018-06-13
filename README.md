@@ -129,7 +129,7 @@ You can download [here](assets/plists/min/Info.plist) a plist file with the mini
 		<array>
 			<string></string>
 		</array>
-    </dict>
+	</dict>
 	</dict>
 </plist>
 
@@ -183,7 +183,7 @@ You can download [here](assets/plists/full/Info.plist) a plist file with all ava
 			<string>kSecAttrAccessibleWhenUnlocked</string>
 			<key>KEYCHAIN_ACCESS_GROUP</key>
 			<string></string>
-    </dict>
+	</dict>
 	</dict>
 </plist>
 
@@ -194,10 +194,11 @@ You can download [here](assets/plists/full/Info.plist) a plist file with all ava
 On your AppDelegate.swift file, import OpenAuth and implement the following method
 
 ```swift
+	
 	func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
 		OpenAuth.shared.handleRedirect(url: url)
 		return true
-    }
+	}
 ```
 
 ## Acquire the token
