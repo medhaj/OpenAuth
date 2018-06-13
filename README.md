@@ -208,9 +208,7 @@ To acquire the access token, import OpenAuth in your code and call the following
 To force OpenAuth to display a safari view controller embedded in your app, set the embedded Boolean attribute to true and provide a context from which OpenAuth will display the safari controller. The context can be the current view controller, a navigation view controller or any other view controller based objects
 
 ```swift
-    OpenAuth.acquireToken(authorizeContext: context, 
-    							embedded: true, 
-    							success: { (token: String) in
+    OpenAuth.acquireToken(authorizeContext: context, embedded: true, success: { (token: String) in
            //Use your token here
         }) { (error: Error) in
            //Handle error here
@@ -227,7 +225,7 @@ To logout, use the logout function as indicated in the following snippet code. O
 
 ## Credit
 
-All creadits go to [Pascal Pfiffner](https://github.com/p2).
+All credits go to [Pascal Pfiffner](https://github.com/p2).
 Most of the SDK is inspired by [p2.OAuth2](https://github.com/p2/OAuth2) swift librairy.
 
 
