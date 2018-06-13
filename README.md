@@ -187,7 +187,7 @@ You can download [here](assets/plists/full/OpenAuth.plist) a plist file with all
 On your AppDelegate.swift file, import OpenAuth and implement the following method
 
 ```swift
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+	func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         OpenAuth.shared.handleRedirect(url: url)
         return true
     }
@@ -198,7 +198,7 @@ On your AppDelegate.swift file, import OpenAuth and implement the following meth
 To acquire the access token, import OpenAuth in your code and call the following function
 
 ```swift
-    OpenAuth.acquireToken(success: { (token: String) in
+	OpenAuth.acquireToken(success: { (token: String) in
             //Use your token here
         }) { (error: Error) in
             //Handle error here
@@ -208,7 +208,7 @@ To acquire the access token, import OpenAuth in your code and call the following
 To force OpenAuth to display a safari view controller embedded in your app, set the embedded Boolean attribute to true and provide a context from which OpenAuth will display the safari controller. The context can be the current view controller, a navigation view controller or any other view controller based objects
 
 ```swift
-    OpenAuth.acquireToken(authorizeContext: context, embedded: true, success: { (token: String) in
+	OpenAuth.acquireToken(authorizeContext: context, embedded: true, success: { (token: String) in
            //Use your token here
         }) { (error: Error) in
            //Handle error here
@@ -220,7 +220,7 @@ To force OpenAuth to display a safari view controller embedded in your app, set 
 To logout, use the logout function as indicated in the following snippet code. OpenAuth will forget all tokens and remove any stored cookies related to its flows.
 
 ```swift
-  	OpenAuth.logout()
+	OpenAuth.logout()
 ```
 
 ## Credit
