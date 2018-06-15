@@ -206,7 +206,7 @@ SWIFT_CLASS("_TtC8OpenAuth8OpenAuth")
 @interface OpenAuth : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-+ (void)configure;
++ (void)check;
 @end
 
 
