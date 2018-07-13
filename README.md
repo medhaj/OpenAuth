@@ -1,11 +1,11 @@
 <p align="center" >
-  <img align="center" src="assets/images/password.gif" alt="OpenAuth" title="OpenAuth">
+  <img align="center" src="https://github.com/medhaj/OpenAuth/blob/master/assets/images/password.gif?raw=true" alt="OpenAuth" title="OpenAuth">
 </p>
 
 
 # OAuth2 for iOS
 
-[![CocoaPods Compatible](https://cocoapod-badges.herokuapp.com/v/OpenAuth/1.0.5/badge.png)](https://cocoadocs.org/docsets/OpenAuth)
+[![CocoaPods Compatible](https://cocoapod-badges.herokuapp.com/v/OpenAuth/1.0.6/badge.png)](https://cocoadocs.org/docsets/OpenAuth)
 [![Platform](https://cocoapod-badges.herokuapp.com/p/OpenAuth/badge.png)](https://cocoadocs.org/docsets/OpenAuth)
 [![Twitter](https://img.shields.io/badge/twitter-@MedHajlaoui-blue.svg?style=flat)](https://twitter.com/MedHajlaoui)
 
@@ -43,7 +43,7 @@ Skip this section if you used CocoaPods to link OpenAuth to your project.
 - Download the SDK located under OpenAuth/OpenAuth.framework
 - Add `OpenAuth.framework` file to your project and add it to `Embedded Binaries`.
 <p align="center" >
-  <img align="center" src="assets/images/manual.png" alt="OpenAuth" title="Manual Installation">
+  <img align="center" src="https://github.com/medhaj/OpenAuth/blob/master/assets/images/manual.png?raw=true" alt="OpenAuth" title="Manual Installation">
 </p>
 
 > Congratulations, the framework is fully integrated to the app and you can start using it.
