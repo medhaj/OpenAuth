@@ -163,8 +163,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # define SWIFT_DEPRECATED_OBJC(Msg) SWIFT_DEPRECATED_MSG(Msg)
 #endif
 #if __has_feature(modules)
-@import Foundation;
 @import ObjectiveC;
+@import Foundation;
 @import UIKit;
 @import WebKit;
 #endif
@@ -184,29 +184,19 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-
-
 @class NSURLSession;
 @class NSURLAuthenticationChallenge;
 @class NSURLCredential;
 
 /// An URLSession delegate that allows you to use self-signed SSL certificates.
-/// Doing so is a REALLY BAD IDEA, even in development environments where you can use real, free certificates that are valid a few months.
+/// NOTE: Doing so is a REALLY BAD IDEA, even in development environments where you can use real, free certificates that are valid a few months.
 /// Still, sometimes you’ll have to do this so this class is provided, but DO NOT SUBMIT your app using self-signed SSL certs to the App
 /// Store. You have been warned!
-SWIFT_CLASS("_TtC8OpenAuth29OAuth2DebugURLSessionDelegate")
-@interface OAuth2DebugURLSessionDelegate : NSObject <NSURLSessionDelegate>
+SWIFT_CLASS("_TtC8OpenAuth23DebugURLSessionDelegate")
+@interface DebugURLSessionDelegate : NSObject <NSURLSessionDelegate>
 - (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-@end
-
-
-SWIFT_CLASS("_TtC8OpenAuth8OpenAuth")
-@interface OpenAuth : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-+ (void)check;
 @end
 
 
@@ -227,9 +217,9 @@ SWIFT_CLASS("_TtC8OpenAuth17WebViewController")
 - (void)viewWillAppear:(BOOL)animated;
 - (void)dismissViewControllerAnimated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
 - (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationAction:(WKNavigationAction * _Nonnull)navigationAction decisionHandler:(void (^ _Nonnull)(WKNavigationActionPolicy))decisionHandler;
-- (void)webView:(WKWebView * _Nonnull)webView didStartProvisionalNavigation:(WKNavigation * _Null_unspecified)navigation;
-- (void)webView:(WKWebView * _Nonnull)webView didFinishNavigation:(WKNavigation * _Null_unspecified)navigation;
-- (void)webView:(WKWebView * _Nonnull)webView didFailNavigation:(WKNavigation * _Null_unspecified)navigation withError:(NSError * _Nonnull)error;
+- (void)webView:(WKWebView * _Nonnull)webView didStartProvisionalNavigation:(WKNavigation * _Nonnull)navigation;
+- (void)webView:(WKWebView * _Nonnull)webView didFinishNavigation:(WKNavigation * _Nonnull)navigation;
+- (void)webView:(WKWebView * _Nonnull)webView didFailNavigation:(WKNavigation * _Nonnull)navigation withError:(NSError * _Nonnull)error;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 

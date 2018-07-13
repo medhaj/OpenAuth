@@ -5,7 +5,7 @@
 
 # OAuth2 for iOS
 
-[![CocoaPods Compatible](https://cocoapod-badges.herokuapp.com/v/OpenAuth/1.0.4/badge.png)](https://cocoadocs.org/docsets/OpenAuth)
+[![CocoaPods Compatible](https://cocoapod-badges.herokuapp.com/v/OpenAuth/1.0.5/badge.png)](https://cocoadocs.org/docsets/OpenAuth)
 [![Platform](https://cocoapod-badges.herokuapp.com/p/OpenAuth/badge.png)](https://cocoadocs.org/docsets/OpenAuth)
 [![Twitter](https://img.shields.io/badge/twitter-@MedHajlaoui-blue.svg?style=flat)](https://twitter.com/MedHajlaoui)
 
@@ -49,13 +49,33 @@ Skip this section if you used CocoaPods to link OpenAuth to your project.
 > Congratulations, the framework is fully integrated to the app and you can start using it.
 
 
+## Supported grant flows
+
+OpenAuth uses generic types for GrantType, OpenAuth<CodeGrant> is an authorization manager that implements the Code Grant flow. The following is the list of all implemented flows:
+
+| Flow        		| Class       | 
+|:-----------------:|:-------------:|
+|[Code Grant Flow](https://tools.ietf.org/html/rfc6749#section-4.1)|`OpenAuth<CodeGrant>`|
+|Code Grant without token type | `OpenAuth<CodeGrantNoTokenType>` |
+|Code Grant Flow with Basic Auth| `OpenAuth<CodeGrantBasicAuth>`|
+|[Implicit Grant Flow](https://tools.ietf.org/html/rfc6749#section-1.3.2)| `OpenAuth<ImplicitGrant>`|
+|Implicit Grant Flow with query parameters| `OpenAuth<ImplicitGrantWithQueryParams>` |
+|[Client Credentials](https://tools.ietf.org/html/rfc6749#section-1.3.4)| `OpenAuth<ClientCredentials>` |
+
+At this point, once you pick the Grant Flow your app will implement, all requests to OpenAuth should be specified using a Grant Type flow. You can declare a typealias on top of OpenAuth specifying the Grant flow you want to use. For the rest of documentation, we will use the Code Grant Flow:
+
+```swift
+	typealias Auth = OpenAuth<CodeGrant>
+```
+
+
 ## Enable the logger
 
 Optionally, you can enable to the logger. Use the following code to set a logging level to the logger:
 
 
 ```swift
-	OpenAuth.logger.level = .verbose
+	Auth.logger.level = .verbose
 ```
 
                   
@@ -66,6 +86,7 @@ You can choose one of the following logging levels:
 - warning
 - error
 - none
+
 
 ## Add your OAuth2 configuration
 
@@ -196,7 +217,7 @@ On your AppDelegate.swift file, import OpenAuth and implement the following meth
 ```swift
 	
 	func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-		OpenAuth.shared.handleRedirect(url: url)
+		Auth.shared.handleRedirect(url: url)
 		return true
 	}
 ```
@@ -206,7 +227,7 @@ On your AppDelegate.swift file, import OpenAuth and implement the following meth
 To acquire the access token, import OpenAuth in your code and call the following function
 
 ```swift
-	OpenAuth.acquireToken(success: { (token: String) in
+	Auth.acquireToken(success: { (token: String) in
             //Use your token here
         }) { (error: Error) in
             //Handle error here
@@ -216,11 +237,26 @@ To acquire the access token, import OpenAuth in your code and call the following
 To force OpenAuth to display a safari view controller embedded in your app, set the embedded Boolean attribute to true and provide a context from which OpenAuth will display the safari controller. The context can be the current view controller, a navigation view controller or any other view controller based objects
 
 ```swift
-	OpenAuth.acquireToken(authorizeContext: context, embedded: true, success: { (token: String) in
+	Auth.acquireToken(authorizeContext: context, embedded: true, success: { (token: String) in
            //Use your token here
         }) { (error: Error) in
            //Handle error here
         }
+```
+
+Optionally, you can pass custom parameters to be added to the Authorize request:
+
+```swift
+	let params = ["key1": "value1",
+                 "key2": "value2"]
+        
+   	Auth.acquireToken(success: { (token: String) in
+            //use your token here
+        }, failure: { (error: Error) in
+            //handle error here
+        }, params: params,
+           embedded: false,
+           authorizeContext: nil)
 ```
 
 ## Logout
@@ -228,7 +264,7 @@ To force OpenAuth to display a safari view controller embedded in your app, set 
 To logout, use the logout function as indicated in the following snippet code. OpenAuth will forget all tokens and remove any stored cookies related to its flows.
 
 ```swift
-	OpenAuth.logout()
+	Auth.logout()
 ```
 
 ## Credit
