@@ -5,7 +5,7 @@
 
 # OAuth2 for iOS
 
-[![CocoaPods Compatible](https://cocoapod-badges.herokuapp.com/v/OpenAuth/1.0.8/badge.png)](https://cocoadocs.org/docsets/OpenAuth)
+[![CocoaPods Compatible](https://cocoapod-badges.herokuapp.com/v/OpenAuth/1.0.9/badge.png)](https://cocoadocs.org/docsets/OpenAuth)
 [![Platform](https://cocoapod-badges.herokuapp.com/p/OpenAuth/badge.png)](https://cocoadocs.org/docsets/OpenAuth)
 [![Twitter](https://img.shields.io/badge/twitter-@MedHajlaoui-blue.svg?style=flat)](https://twitter.com/MedHajlaoui)
 
