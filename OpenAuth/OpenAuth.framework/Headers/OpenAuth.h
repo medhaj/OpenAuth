@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-//! Project version number for Appgrades.
+//! Project version number for OpenAuthOpenAuth.
 FOUNDATION_EXPORT double OpenAuthVersionNumber;
 
-//! Project version string for Appgrades.
+//! Project version string for OpenAuth.
 FOUNDATION_EXPORT const unsigned char OpenAuthVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <OpenAut/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import <OpenAuth/PublicHeader.h>
 
 

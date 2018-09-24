@@ -194,7 +194,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 /// Store. You have been warned!
 SWIFT_CLASS("_TtC8OpenAuth23DebugURLSessionDelegate")
 @interface DebugURLSessionDelegate : NSObject <NSURLSessionDelegate>
-- (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
+- (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(enum NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
