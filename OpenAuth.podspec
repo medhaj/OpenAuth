@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = "OpenAuth"
-    s.version          = "1.1.0"
+    s.version          = "1.1.1"
     s.summary          = "OAuth2.0 made easy for iOS"
 
 # This description is used to generate tags and improve search results.
@@ -33,7 +33,7 @@ DESC
     s.ios.deployment_target = '9.0'
 
 
-    s.source              = { :git => "https://github.com/medhaj/OpenAuth.git", :tag => "1.1.0" }
+    s.source              = { :git => "https://github.com/medhaj/OpenAuth.git", :tag => "1.1.1" }
     s.vendored_frameworks = 'OpenAuth/OpenAuth.framework'
 
 end
